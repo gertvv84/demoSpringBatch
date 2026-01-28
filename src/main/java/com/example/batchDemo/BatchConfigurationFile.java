@@ -18,7 +18,7 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
-@EnableBatchProcessing
+//@EnableBatchProcessing --> niet meer nodig vanaf Spring 3?
 public class BatchConfigurationFile {
     @Bean
     protected FlatFileItemReader<String> reader() {
