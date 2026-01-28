@@ -1,5 +1,6 @@
 package com.example.batchDemo;
 
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.job.Job;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
@@ -17,6 +18,7 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
+@EnableBatchProcessing
 public class BatchConfigurationFile {
     @Bean
     protected FlatFileItemReader<String> reader() {
